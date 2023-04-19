@@ -9,32 +9,32 @@
        Create a database , give it name like "Human_Resource". Create a collection inside this named "employee"
     </h2>
     <p>
-        Query the collection "employee" and list all the documents
+        1. Query the collection "employee" and list all the documents
     </p>
-    <strong>  db.employee.find() </strong>
+    <strong> db.employee.find() </strong>
     <hr/>
     <p>
-        Query the collection "employee" and list the employees who are having salary more than 30000
+        2. Query the collection "employee" and list the employees who are having salary more than 30000
     </p>
     <strong> db.employee.find({"salary":{$gt:"30000"}}) </strong>
     <hr/>
     <p>
-        Query the collection "employee" and list the employees who are having experience more than 2 years.
+        3. Query the collection "employee" and list the employees who are having experience more than 2 years.
     </p>
     <strong> db.employee.find({"overallExp":{$gt:"2"}}) </strong>
     <hr/>
     <p>
-        Query the collection "employee" and list the employees who are graduated after 2015 and having experience more than 1 year 
+        4. Query the collection "employee" and list the employees who are graduated after 2015 and having experience more than 1 year 
     </p>
     <strong> db.employee.find({"yearGrad":{$gt:"2015"},"overallExp":{$gt:"1"}}) </strong>
     <hr/>
     <p>
-        Query the collection "employee" and update the salary of the employee whose salary is greater than 30000 to 45000.
+        5. Query the collection "employee" and update the salary of the employee whose salary is greater than 30000 to 45000.
     </p>
     <strong> db.employee.updateMany({"salary":{$gt:"30000"}},{$set:{"salary":"45000"}}) </strong>
     <hr/>
     <p>
-        Delete all the documents from "employee" where last company is Y
+        6. Delete all the documents from "employee" where last company is Y
     </p>
     <strong> db.employee.deleteMany({"lastCompany":{$eq:"Y"}}) </strong>
     <hr/>
